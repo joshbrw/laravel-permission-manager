@@ -1,0 +1,40 @@
+{
+    "name": "joshbrw/laravel-permission-manager",
+    "description": "Laravel Permission Manager",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Brown",
+            "email": "josh@joshbrown.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^5.5",
+        "laravel/framework": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joshbrw\\LaravelPermissions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Joshbrw\\LaravelPermissions\\Tests": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Joshbrw\\LaravelPermissions\\LaravelPermissionManagerServiceProvider"
+            ],
+            "aliases": {
+                "Permissions": "Joshbrw\\LaravelPermissions\\Facades\\Permissions"
+            }
+        }
+    }
+}
